@@ -20,6 +20,7 @@ export const authReducer = ( state: AuthState, action: AuthAction ): AuthState =
                 ...state,
                 isLoggedIn: false,
                 userName: undefined,
+                favoriteIcon: undefined
             }
         case 'changeFavIcon':
             return {
