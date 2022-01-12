@@ -21,6 +21,7 @@ export interface AuthContextProps {
     authState: AuthState;
     signIn: () => void;
     signOut: () => void;
+    changeFavIcon: (iconName: string) => void;
 }
 
 // Crear el contexto 
@@ -43,12 +44,20 @@ export const AuthProvider = ({ children }: { children: any}) => {
         });
     }
 
+    const changeFavIcon = (iconName: string) => {
+        dispatch({
+            type: 'changeFavIcon',
+            payload: iconName,
+        });
+    }
+
     return (
         <AuthContext.Provider
             value={{
                 authState,
                 signIn,
                 signOut,
+                changeFavIcon,
             }}
         >
             {/* Aqui va el componente que queremos que se renderice */}

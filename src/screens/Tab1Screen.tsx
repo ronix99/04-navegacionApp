@@ -4,6 +4,7 @@ import styles from '../theme/appTheme';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { colores } from '../theme/appTheme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import TouchableIcon from '../components/TouchableIcon';
 
 const Tab1Screen = () => {
 
@@ -17,14 +18,14 @@ const Tab1Screen = () => {
         <View style= { [styles.globalMargin, { marginTop: top + 10 }] }>
             <Text style={ styles.title }>Iconos</Text>
             <Text>
-                <Icon name='airplane-outline' size={80} color={ colores.primary }/>
-                <Icon name='alarm-outline' size={80} color={ colores.primary }/>
-                <Icon name='at-circle-outline' size={80} color={ colores.primary }/>
-                <Icon name='backspace-outline' size={80} color={ colores.primary }/>
-                <Icon name='battery-full-outline' size={80} color={ colores.primary }/>
-                <Icon name='beaker-outline' size={80} color={ colores.primary }/>
-                <Icon name='alert-circle-outline' size={80} color={ colores.primary }/>
-                <Icon name='battery-charging-outline' size={80} color={ colores.primary }/>
+                <TouchableIcon iconName='airplane-outline' />
+                <TouchableIcon iconName='alarm-outline' />
+                <TouchableIcon iconName='at-circle-outline' />
+                <TouchableIcon iconName='backspace-outline' />
+                <TouchableIcon iconName='battery-full-outline'/>
+                <TouchableIcon iconName='beaker-outline' />
+                <TouchableIcon iconName='alert-circle-outline' />
+                <TouchableIcon iconName='battery-charging-outline' />
             </Text>
         </View>
     );

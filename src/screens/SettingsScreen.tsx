@@ -22,7 +22,9 @@ const SettingsScreen = () => {
 
         <View style={styles.ajustesContainer}>
           <View style={ styles.ajustesItemContainer }>
-            <Icon name="cog-outline" size={ 30 } color="black" style={{ marginBottom: 5}}/>
+          { authState.favoriteIcon && (
+            <Icon name={ authState.favoriteIcon } size={ 30 } color="black" style={{ marginBottom: 5}}/>
+          )}
             <Text style={styles.ajusteItem}>
               { JSON.stringify(authState) }
             </Text>
